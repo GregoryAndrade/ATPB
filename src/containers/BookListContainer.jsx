@@ -6,6 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useState, useEffect } from 'react';
 import { ActivityIndicator } from "react-native";
 
+
 function converter(data) {
     const ids = Object.keys(data);
     const events = Object.values(data);
@@ -33,7 +34,6 @@ export default function BookListContainer({ action }) {
             .then(res => res.json())
             .then(resJson => {
                 const convertedList = converter(resJson);
-                console.log(convertedList);
                 setBooks(convertedList);
             }).finally(_ => setIsLoading(false));
     }, []);
