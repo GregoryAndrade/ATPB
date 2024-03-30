@@ -33,6 +33,7 @@ export default function BookListContainer({ action }) {
             .then(res => res.json())
             .then(resJson => {
                 const convertedList = converter(resJson);
+                console.log(convertedList);
                 setBooks(convertedList);
             }).finally(_ => setIsLoading(false));
     }, []);

@@ -8,8 +8,7 @@ import { useState } from 'react';
 
 const Drawer = createDrawerNavigator();
 
-export default function App(props) {
-   const { navigation } = props;
+export default function App() {
   const [isLoggedUser, setIsLoggedUser] = useState(false);
 
   console.log(isLoggedUser);

@@ -16,7 +16,7 @@ export default function BooksListPage(props) {
 
     return (
         <Stack.Navigator initialRouteName={Routes.Home}>
-            <Stack.Screen name={Routes.BooksPage} options={{
+            <Stack.Screen name="Lista Livros" options={{
                 headerShown: false
             }}>
                 {() => <BookListContainer action={selectBook} />}
