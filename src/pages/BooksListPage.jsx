@@ -13,10 +13,12 @@ export default function BooksListPage(props) {
     function selectBook(book) {
         navigation.navigate(Routes.BookDetails, { ...book })
     };
-    
+
     return (
         <Stack.Navigator initialRouteName={Routes.Home}>
-            <Stack.Screen name={Routes.BooksPage}>
+            <Stack.Screen name={Routes.BooksPage} options={{
+                headerShown: false
+            }}>
                 {() => <BookListContainer action={selectBook} />}
             </Stack.Screen>
             <Stack.Screen
